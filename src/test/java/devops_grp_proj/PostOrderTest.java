@@ -5,6 +5,7 @@ import static org.mockito.Mockito.*;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.StringWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -40,12 +41,19 @@ class PostOrderTest {
         when(request.getParameter("size")).thenReturn("large");
         when(request.getParameter("qty")).thenReturn("8");
 
-        PrintWriter writer = mock(PrintWriter.class);
+        StringWriter stringWriter = new StringWriter();
+        PrintWriter writer = new PrintWriter(stringWriter); 
         when(response.getWriter()).thenReturn(writer);
 
-        servlet.doPost(request, response);
+        servlet.doPost(request, response); //running the doPost method from 
+        verify(request, atLeastOnce()).getParameter("color");
+        verify(request, atLeastOnce()).getParameter("size");
+        verify(request, atLeastOnce()).getParameter("qty");
 
-        verify(writer).println("<h1>" + "You have successfully ordered!" + "</h1>");
+        // Verify that the output is what we expect
+        String output = stringWriter.getBuffer().toString().trim();
+        assertEquals("<h1>You have successfully ordered!</h1>", output);
+
 		
 	}
 

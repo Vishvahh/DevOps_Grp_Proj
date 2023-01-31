@@ -63,13 +63,9 @@ Size:<select name="size">
 <p style="background-color:red;width:200px;font-size:1.5vw;color:white;margin-left:100px;margin-top:20px;text-align:center">Row - 2, Aisle - 1</p>
 <div class="row">
 <div class="container">
-<h3 class="text-center">List of Users</h3>
+<h3 class="text-center">Order List</h3>
 <hr>
-<div class="container text-left">
-<!-- Add new user button redirects to the register.jsp page -->
-<a href="<%=request.getContextPath()%>/register.jsp" class="btn btn-
-success">Add New User</a>
-</div>
+
 <br>
 <!-- Create a table to list out all current users information -->
 <table class="table">
@@ -100,12 +96,7 @@ information accordingly -->
 
 <!-- For each user in the database, Edit/Delete
 buttons which invokes the edit/delete functions -->
-<td>
-<a href="edit?name=<c:out value='${user.name}'
-/>">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp;
-<a href="delete?name=<c:out
-value='${user.name}' />">Delete</a>
-</td>
+
 </tr>
 </c:forEach>
 </tbody>

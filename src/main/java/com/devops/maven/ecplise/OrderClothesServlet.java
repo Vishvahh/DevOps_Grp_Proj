@@ -44,7 +44,7 @@ public class OrderClothesServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		//Step 2: retrieve the four parameters from the request from the web form
 		
-		String n = request.getParameter("color");
+		String n = request.getParameter("color"); 
 		String p = request.getParameter("size");
 		String e = request.getParameter("qty");
 		//Step 3: attempt connection to database using JDBC, you can change the username and password accordingly using the phpMyAdmin > User Account dashboard
