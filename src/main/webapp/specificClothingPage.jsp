@@ -23,7 +23,7 @@ crossorigin="anonymous">
 minimal wrinkles</p>
 
 </div>
-<form action="OrderClothesServlet" method="post"> 
+<form action="OrderClothesServlet" method="post">  
 Colors:<select name="color">
 <option>Red</option>
 <option>Blue</option>
