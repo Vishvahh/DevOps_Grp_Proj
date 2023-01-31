@@ -28,7 +28,7 @@ Color:<select name="color">
 <option>Red</option>
 <option>Blue</option>
 
-</select>
+</select> 
 
 <br>
 <div style="margin-top:30px"></div>
