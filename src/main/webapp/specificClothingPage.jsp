@@ -24,7 +24,7 @@ minimal wrinkles</p>
 
 </div>
 <form action="OrderClothesServlet" method="post"> 
-Size:<select name="color">
+Color:<select name="color">
 <option>Red</option>
 <option>Blue</option>
 
@@ -63,44 +63,10 @@ Size:<select name="size">
 <p style="background-color:red;width:200px;font-size:1.5vw;color:white;margin-left:100px;margin-top:20px;text-align:center">Row - 2, Aisle - 1</p>
 <div class="row">
 <div class="container">
-<h3 class="text-center">Order List</h3>
-<hr>
+
 
 <br>
-<!-- Create a table to list out all current users information -->
-<table class="table">
-<thead>
-<tr>
-<th>Color</th>
-<th>Size</th>
-<th>Qty</th>
 
-</tr>
-</thead>
-<!-- Pass in the list of users receive via the Servlet’s response to a loop
--->
-<tbody>
-<c:forEach var="user" items="${listUsers}">
-<!-- For each user in the database, display their
-information accordingly -->
-<tr>
-<td>
-<c:out value="${user.color}" />
-</td>
-<td>
-<c:out value="${user.size}" />
-</td>
-<td>
-<c:out value="${user.qty}" />
-</td>
-
-<!-- For each user in the database, Edit/Delete
-buttons which invokes the edit/delete functions -->
-
-</tr>
-</c:forEach>
-</tbody>
-</table>
 </div>
 </div>
 </body>
