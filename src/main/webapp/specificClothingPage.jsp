@@ -24,7 +24,7 @@ minimal wrinkles</p>
 
 </div>
 <form action="OrderClothesServlet" method="post"> 
-Color:<select name="color">
+Colors:<select name="color">
 <option>Red</option>
 <option>Blue</option>
 
