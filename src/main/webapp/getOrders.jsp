@@ -15,14 +15,8 @@
 <body>
 	<div class="row">
 		<div class="container">
-			<h3 class="text-center">List of Users</h3>
-			<hr>
-			<div class="container text-left">
-				<!-- Add new user button redirects to the register.jsp page -->
-				<a href="<%=request.getContextPath()%>/register.jsp"
-					class="btn btn-success">Add New User</a>
-			</div>
-			<br>
+			<h3 class="text-center">Order List</h3>
+		
 			<!-- Create a table to list out all current users information -->
 			<table class="table">
 				<thead>
