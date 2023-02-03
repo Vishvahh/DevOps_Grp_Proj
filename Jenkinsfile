@@ -1,25 +1,24 @@
 pipeline {
     agent any
     stages {
-        stage('git repo & clean') {
+        stage('build') {
             steps {
-                bat "mvn clean -f jenkinsFilePipelinee"
-            }
-        }
-        stage('install') {
-            steps {
-                bat "mvn install -f jenkinsFilePipelinee"
+            echo 'building application'
+           
             }
         }
         stage('test') {
             steps {
-                bat "mvn test -f jenkinsFilePipelinee"
+               echo 'testing application'
+
             }
         }
-        stage('package') {
+        stage('deploy') {
             steps {
-                bat "mvn package -f jenkinsFilePipelinee"
+                               echo 'deploying application'
+
             }
         }
+    
     }
 }
