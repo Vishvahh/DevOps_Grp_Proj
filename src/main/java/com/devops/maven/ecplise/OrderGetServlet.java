@@ -1,6 +1,8 @@
 package com.devops.maven.ecplise;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -48,11 +50,11 @@ public class OrderGetServlet extends HttpServlet {
 
 	/**
 	 * @see HttpServlet#HttpServlet()
-	 */
-	public OrderGetServlet() { 
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	 */ 
+//	public OrderGetServlet() {  
+//		super();
+//		// TODO Auto-generated constructor stub
+//	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
@@ -102,14 +104,22 @@ public class OrderGetServlet extends HttpServlet {
 				String qty = rs.getString("qty");
 				users.add(new Prev_orders(color, size, qty));  
 			}
-			System.out.println("got items"); 
+			
+//			System.out.println(users.size());
+			
+//			PrintWriter writer = response.getWriter();
+//			writer.println("getting");
+//			writer.close();
+			System.out.println(users.size());
+
+
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
 		// Step 5.4: Set the users list into the listUsers attribute to be pass to the
 		// userManagement.jsp
 		request.setAttribute("listUsers", users);
-		request.getRequestDispatcher("/specificClothingPage.jsp").forward(request, response);
+		request.getRequestDispatcher("/getOrders.jsp").forward(request, response);
 	}
 
 	/**

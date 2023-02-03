@@ -46,7 +46,7 @@ class PostOrderTest {
         when(response.getWriter()).thenReturn(writer);
 
         servlet.doPost(request, response); //running the doPost method from 
-        verify(request, atLeastOnce()).getParameter("color");
+        verify(request, atLeastOnce()).getParameter("color"); 
         verify(request, atLeastOnce()).getParameter("size");
         verify(request, atLeastOnce()).getParameter("qty");
 
