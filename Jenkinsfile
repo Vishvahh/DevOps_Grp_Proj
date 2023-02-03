@@ -7,22 +7,22 @@ pipeline {
         stage('build') {
             steps {
             echo 'building application'
-            sh "mvn install"
+            bat "mvn install -f jenkinsFilePipelinee "
            
             }
         }
         stage('test') {
             steps {
-               echo 'testing application'
-                           sh "mvn test"
+               
+                           bat "mvn test -f jenkinsFilePipelinee"
                
 
             }
         }
-        stage('deploy') {
+        stage('package') {
             steps {
-                               echo 'deploying application'
-                                                          sh "mvn deploy"
+                              
+                                                          bat "mvn package -f jenkinsFilePipelinee"
                                
 
             }
